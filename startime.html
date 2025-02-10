@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let display;
+        function showTime()
+        {
+            let dateTime=new Date();
+            let time=dateTime.toLocaleTimeString();
+            console.log(time)
+            
+        }
+        function start()
+        {
+         display=setInterval(showTime,1000);
+        console.log(display);
+        }
+        function stop()
+        {
+            alert("stopped");
+            clearInterval(display);
+        }
+    </script>
+    <button onclick="stop()">stop</button>
+    <button onclick="start()">start</button>
+
+</body>
+</html>
